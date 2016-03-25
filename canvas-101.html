@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App</title>
+
+	<style type="text/css" media="screen">
+		
+		canvas {
+			border: red solid 1px;
+			margin: 30px;
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<canvas id="the-canvas" height="500px" width="500px"><!-- Our drawing will go here! --></canvas>
+
+	<script type="text/javascript">
+		
+		var canvas = document.getElementById('the-canvas');
+		var context = canvas.getContext('2d');
+
+		
+
+
+		// Draw a star
+		// context.strokeStyle = "#00ff00";
+		// context.beginPath();
+		// context.moveTo(100,100);
+		// context.lineTo(200,200);
+		// context.lineTo(300,100);
+		// context.lineTo(100,200);
+		// context.lineTo(300,150);
+		// context.lineTo(100,100);
+		// context.stroke();
+
+
+
+		// Draw a circle
+		// context.fillStyle = "#0000ff";
+		// context.beginPath();
+		// context.arc(175, 175, 50, 0, 1.3*Math.PI);
+		// context.fill();
+
+		// Draw a rectangle
+		// context.beginPath();
+		// context.rect(300,20,100,200);
+		// context.stroke();
+
+		// Draw a square
+		// context.beginPath();
+		// context.rect(200,20,50,50);
+		// context.stroke();
+
+		// context.beginPath();
+		// context.arc(x,y,radius,0, Math.PI*2);
+		// context.fill();
+
+		var x = 150;
+		var y = 150;
+		var radius = 10;
+
+		function draw(){
+			context.clearRect(0,0, 500, 500);
+			context.beginPath();
+			context.arc(x,y,radius,0, Math.PI*2);
+			context.fill();
+			x += 4;
+			y += 2;
+	}
+		var ballInt = setInterval(draw, 15);
+		
+
+
+	
+
+	</script>
+
+</body>
+</html>
