@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
 		function animate(current){
-
+console.log(currTemp);
 			//Draw the inner circle
 			context.fillStyle = "#ccc";
 			context.beginPath();
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 			// Draw the outer arc/line
 			context.lineWidth = 10;
-			context.strokeStyle = "#ff0000";
+			context.strokeStyle = shadeColor;
 			context.beginPath();
 			context.arc(155,75,70, Math.PI*1.5, (Math.PI*2 * current) + Math.PI*1.5);
 			context.stroke();
@@ -51,7 +51,7 @@ $(document).ready(function(){
 			context.font = "48px Myriad Pro";
 			context.fillStyle = "#0000ff";
 			context.textBaseLine = "top";
-			context.fillText = (currTemp, 175-70, (85-70)*6);	
+			context.fillText(currTemp, 175-70, (85-70)*6);	
 			currPerc++;
 			if(currPerc < currTemp){
 				requestAnimationFrame(function(){
